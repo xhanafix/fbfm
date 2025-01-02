@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Caption Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Facebook Caption Generator</h1>
+            <button id="themeToggle" class="theme-toggle">🌙</button>
+        </div>
+        
+        <div class="api-key-section">
+            <input type="password" id="apiKeyInput" placeholder="Enter your OpenRouter API key">
+            <button id="saveApiKey">Save API Key</button>
+            <span id="apiStatus"></span>
+        </div>
+
+        <div class="generator-section">
+            <textarea id="topicInput" placeholder="What's your post about? (e.g., New product launch, Behind the scenes, Customer success story)"></textarea>
+            
+            <div class="tone-selector">
+                <h3>Select Your Tone:</h3>
+                <div class="tone-options">
+                    <button class="tone-btn active" data-tone="casual">😊 Casual & Fun</button>
+                    <button class="tone-btn" data-tone="professional">👔 Professional</button>
+                    <button class="tone-btn" data-tone="motivational">🔥 Motivational</button>
+                </div>
+            </div>
+
+            <div class="language-selector">
+                <h3>Select Output Language:</h3>
+                <div class="language-options">
+                    <button class="lang-btn active" data-lang="en">🇬🇧 English</button>
+                    <button class="lang-btn" data-lang="my">🇲🇾 Bahasa Malaysia</button>
+                </div>
+            </div>
+
+            <button id="generateBtn">✨ Generate Caption</button>
+
+            <div class="output-section">
+                <div class="loading-spinner" id="loadingSpinner">
+                    <div class="spinner"></div>
+                    <p>Crafting your perfect caption...</p>
+                </div>
+                <textarea id="outputText" readonly placeholder="Your generated caption will appear here..."></textarea>
+                <button id="copyBtn">📋 Copy Caption</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
