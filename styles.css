@@ -213,6 +213,9 @@ button:active {
     line-height: 1.8;
     font-size: 1.1rem;
     padding: 1.5rem;
+    min-height: 300px;
+    height: auto;
+    resize: none;
 }
 
 #copyBtn {
