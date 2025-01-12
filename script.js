@@ -146,14 +146,14 @@ class CaptionGenerator {
 
     createPrompt(topic, tone) {
         const toneGuides = {
-            casual: "santai dan mesra dengan unsur humor",
-            professional: "profesional tetapi mesra",
-            motivational: "memberi semangat dan inspirasi"
+            casual: "conversational with humor and straight talk",
+            professional: "confident and authoritative yet approachable",
+            motivational: "emotionally engaging with urgency and excitement"
         };
 
         const language = this.getCurrentLanguage();
         const languageInstructions = language === 'my' 
-            ? `Tulis caption dalam Bahasa Malaysia dengan gaya copywriting Malaysia. Gunakan bahasa yang natural dan santai seperti yang biasa digunakan di media sosial Malaysia. Boleh campurkan perkataan Bahasa Inggeris di mana sesuai.`
+            ? `Write the caption in Bahasa Malaysia (Malay language). Use natural, conversational Malay that's commonly used in Malaysia. Include some English words where appropriate, as this is common in Malaysian social media. Ensure the tone and style remain appropriate for Malaysian audience.`
             : `Write the caption in English.`;
 
         return `Write a Facebook post about: ${topic}
@@ -163,34 +163,29 @@ class CaptionGenerator {
         Use this writing style:
 
         Sentence Structure:
-        - Short, punchy sentences that end with questions or exclamations
-        - Frequent use of Malaysian expressions like "Padu?" and "Susah bai"
-        - Strategic repetition for emphasis (e.g., "Senang, senang, dan senang")
-        - Break complex ideas into simple, numbered steps
-        - Use frequent line breaks for better readability
+        Short and punchy sentences: Sentences are concise, often fragmented for emphasis, making the content easy to read and engaging.
+        Frequent use of lists: Lists are used to break down concepts, making ideas clearer and more digestible.
+        Strategic repetition: Key ideas or phrases are repeated for emphasis and to drive home the main points.
 
         Tone:
-        - Super casual and conversational, like chatting with a friend
-        - Use Malaysian slang and colloquial expressions
-        - Mix Malay and English naturally (e.g., "You can't get both. Susah bai. KECUALI!")
-        - Encouraging and supportive while maintaining local flavor
-        - Include rhetorical questions to engage readers
+        Conversational and relatable: Feels like a friend or mentor sharing advice, with a mix of humor and straight talk.
+        Confident and persuasive: Communicates authority on the subject while staying approachable.
+        Emotionally engaging: Plays on emotions like urgency, excitement, or nostalgia to connect with the audience.
 
         Voice:
-        - Share personal experiences and opinions
-        - Use Malaysian cultural references and local context
-        - Focus on providing value and actionable insights
-        - Keep it authentic and relatable to Malaysian audience
-        - Use "Stack Value" concept to make offers irresistible
+        Informal and witty: Uses slang, playful sarcasm, and humor to make the content lively and engaging.
+        Personal and reflective: Often includes personal anecdotes, rhetorical questions, and first-person language to create a connection with the reader.
+        Encouraging and motivational: Inspires action and confidence, especially when talking about strategies or solutions.
 
         Apply the ${toneGuides[tone]} style throughout the content.
+
+        The goal is to create engaging, valuable content that resonates with the target audience.
 
         Additional Requirements:
         - Add relevant emojis throughout the text
         - Include 3-5 relevant hashtags at the end
         - End with a strong call-to-action
-        - For Malay captions: Use Malaysian expressions like "bersen-sen", "padu", "best", etc.
-        - Include engagement hooks like "Setuju tak?" or "Tag kawan yang perlu tengok ni!"
+        - For Malay captions: Use appropriate Malaysian expressions and cultural references
 
         Format the output with:
         - Single line break between related ideas
