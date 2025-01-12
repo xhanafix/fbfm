@@ -156,7 +156,7 @@ class CaptionGenerator {
             ? `Write the caption in Bahasa Malaysia (Malay language). Use natural, conversational Malay that's commonly used in Malaysia. Include some English words where appropriate, as this is common in Malaysian social media. Ensure the tone and style remain appropriate for Malaysian audience.`
             : `Write the caption in English.`;
 
-        return `Write a Facebook post about: ${topic}
+        return `Write a detailed and comprehensive Facebook post about: ${topic}
 
         ${languageInstructions}
 
@@ -179,11 +179,17 @@ class CaptionGenerator {
 
         Apply the ${toneGuides[tone]} style throughout the content.
 
-        The goal is to create engaging, valuable content that resonates with the target audience.
+        The goal is to create engaging, valuable content that resonates with the target audience. Include:
+        - A compelling introduction that hooks the reader
+        - 3-4 main points or insights about the topic
+        - Personal experiences or examples when relevant
+        - Expert tips or actionable advice
+        - Thought-provoking questions to engage readers
+        - A strong conclusion that ties everything together
 
         Additional Requirements:
         - Add relevant emojis throughout the text
-        - Include 3-5 relevant hashtags at the end
+        - Include 5-7 relevant hashtags at the end
         - End with a strong call-to-action
         - For Malay captions: Use appropriate Malaysian expressions and cultural references
 
@@ -194,7 +200,7 @@ class CaptionGenerator {
         - Hashtags on separate lines at the end
         - Clear visual hierarchy
 
-        Please write a compelling caption following these guidelines:`;
+        Please write a compelling, detailed caption following these guidelines:`;
     }
 
     async callOpenRouterAPI(prompt, apiKey) {
@@ -216,7 +222,7 @@ class CaptionGenerator {
                     }]
                 }],
                 'temperature': 0.7,
-                'max_tokens': 1000
+                'max_tokens': 2000
             })
         });
 
